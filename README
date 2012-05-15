@@ -29,6 +29,9 @@ Instructions:
 4) run make (tested on Linux), this will create two PDF files, one for printing
    and one for the electronic version of the proceedings
 
+NOTE: the PDF files used for each paper are not included in this repository,
+      so, if you do run make, you will get file not found errors
+
 If you run an integrated LaTeX evniroment, and can not use make, check in the
 file Makefile the list of commands needed to generate the proceedings.
 
