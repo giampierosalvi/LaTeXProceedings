@@ -1,9 +1,9 @@
 %% 
-%% FILE: avsp.cls
+%% FILE: confproc.cls
 %%
-%% USAGE:    \documentclass[a4paper,twoside,12pt]{avsp}
+%% USAGE:    \documentclass[a4paper,twoside,12pt]{confproc}
 %%
-%% PURPOSE: LaTeX2e class file for the AVSP Proceedings
+%% PURPOSE: LaTeX2e class file for the Conference Proceedings
 %%
 %% ADDITIONAL COMMANDS:
 %%  \address{} where the conference takes place
@@ -22,7 +22,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{avsp}
+\ProvidesClass{confproc}
 %\PassOptionsToClass{twocolumn}{article}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions
