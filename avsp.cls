@@ -117,7 +117,7 @@
 \newcommand{\includepaper}[4][0 0]{%
 %  \newevenside
   \cleardoublepage
-  \addcontentsline{toc}{subsection}{#2\\\textit{#3}}%
+  \refstepcounter{subsection}\addcontentsline{toc}{subsection}{#2\\\textit{#3}}%
   \addtoauthorindex{#3}
   % this is to get the number of pages in the pdf
   \savebox\mybox{\includegraphics{#4}}
