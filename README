@@ -6,6 +6,9 @@ case it may be useful again. With small modifications, these files can be
 used in general to create proceedings when a pdf file is available for each
 paper, and a list of titles and authors of the paper is available.
 
+News: LaTeX Proceedings has been used successfully by the organizers of 
+      ISADEPT 2012.
+
 Features:
 - title front and back page
 - table of contents with links to each paper
@@ -29,8 +32,9 @@ Instructions:
 4) run make (tested on Linux), this will create two PDF files, one for printing
    and one for the electronic version of the proceedings
 
-NOTE: the PDF files used for each paper are not included in this repository,
-      so, if you do run make, you will get file not found errors
+NOTE: all the PDF files submitted to AVSP2011 have been substituted with a
+      single PDF file to simplify distributing the code. This makes it possible
+      to compile the code, but the resulting proceedings will be a bit boring.
 
 If you run an integrated LaTeX evniroment, and can not use make, check in the
 file Makefile the list of commands needed to generate the proceedings.
