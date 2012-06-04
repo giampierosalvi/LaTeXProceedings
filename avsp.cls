@@ -102,7 +102,8 @@
   \noindent Copyright \copyright\ 2011 by the authors.\par
   \noindent Cover by Giampiero Salvi\par
   \noindent AVSP logo by Jonas Beskow\par
-  \noindent \LaTeX class by Giampiero Salvi\par
+  \noindent \LaTeX class and proceedings files by Giampiero Salvi\par
+  (\url{https://github.com/giampierosalvi/LaTeXProceedings})\par
   \newpage
 }
 
