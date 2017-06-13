@@ -39,6 +39,7 @@
 \newcommand{\isbn}[1]{\gdef\theisbn{#1}}
 \newcommand{\issn}[1]{\gdef\theissn{#1}}
 \newcommand{\howpublished}[1]{\gdef\thehowpublished{#1}}
+\newcommand{\conferencetype}[1]{\gdef\conftype{#1}}
 
 \newcommand{\newevenside}{
         \ifthenelse{\isodd{\thepage}}{\newpage}{
@@ -53,8 +54,8 @@
 % Header/footer layout
 %
 \pagestyle{fancy}
-\lhead[\thepage]{AVSP 2011, Volterra, Italy, Aug 31--Sept 3}
-\rhead[AVSP 2011, Volterra, Italy, Aug 31--Sept 3]{\thepage}
+\lhead[\thepage]{GLU 2017, Stockholm, Sweden, Aug 25}
+\rhead[GLU 2017, Stockholm, Sweden, Aug 25]{\thepage}
 \lfoot{}
 \cfoot{}
 
@@ -71,7 +72,7 @@
     \includegraphics[width=0.2\textwidth]{symbols/kth_pms_comp_science_comm}%
     \vfil%
     {\LARGE Proceedings of the \par}%
-    {\Huge International Conference on\par}%
+    {\Huge \conftype{} on\par}%
     {\Huge \@title \par}%
     \vskip 3em%
     {\large
@@ -85,23 +86,21 @@
   \@thanks
   \vfil\null
   \begin{center}
-    \includegraphics[width=0.8\textwidth]{symbols/avsp-logo}
+    %\includegraphics[width=0.8\textwidth]{symbols/avsp-logo}
   \end{center}
   \end{titlepage}%
   \newpage
   \thispagestyle{plain}
   \noindent\theeditor\par
   \noindent\theschool\par\vspace{5mm}
-  \noindent Proceedings of the International Conference on \@title\par\vspace{5mm}
+  \noindent Proceedings of the \conftype{} on \@title\par\vspace{5mm}
   \noindent ISBN: \theisbn\par
   \noindent ISSN: \theissn\par\vspace{5mm}
   \noindent Published by\par
   \noindent\theschool\par\vspace{5mm}
   \noindent\thehowpublished
   \vfil
-  \noindent Copyright \copyright\ 2011 by the authors.\par
-  \noindent Cover by Giampiero Salvi\par
-  \noindent AVSP logo by Jonas Beskow\par
+  \noindent Copyright \copyright\ 2017 by the authors.\par
   \noindent \LaTeX class and proceedings files by Giampiero Salvi\par
   (\url{https://github.com/giampierosalvi/LaTeXProceedings})\par
   \newpage
