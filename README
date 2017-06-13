@@ -1,4 +1,4 @@
-Copyright 2011-2012, Giampiero Salvi, <giampi@kth.se>
+Copyright 2011-2017, Giampiero Salvi, <giampi@kth.se>
 
 This is a set of LaTeX files I created in order to generate the AVSP 2011
 Proceedings from the data downloaded from EasyChair. I upload it here in
@@ -6,8 +6,10 @@ case it may be useful again. With small modifications, these files can be
 used in general to create proceedings when a pdf file is available for each
 paper, and a list of titles and authors of the paper is available.
 
-News: LaTeX Proceedings has been used successfully by the organizers of 
-      ISADEPT 2012.
+Proceedings created using LaTeXProceedings (that I know of):
+- AVSP 2011
+- ISADEPT 2012
+- GLU 2017
 
 Features:
 - title front and back page
