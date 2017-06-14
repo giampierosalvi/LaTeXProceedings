@@ -1,5 +1,5 @@
 # EasyChair2PaperList: extracts list of authors, title and submission number for each
-#    submission in a EasyChair Conference and output a LaTeX file that can be imported
+#    submission in a EasyChair Conference and outputs a LaTeX file that can be imported
 #    by the LaTeXProceedings class to create the conference proceedings.
 #
 # Usage:
