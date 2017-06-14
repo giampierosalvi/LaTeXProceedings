@@ -6,7 +6,7 @@ TGT = glu2017
 
 all: ${TGT}.pdf
 
-${TGT}.pdf: ${TGT}.tex papers_glu2017.tex
+${TGT}.pdf: ${TGT}.tex papers.tex
 	pdflatex ${TGT}
 	./authorindex ${TGT}
 	pdflatex ${TGT}
