@@ -101,7 +101,7 @@
   \noindent\thehowpublished
   \vfil
   \noindent Copyright \copyright\ 2017 by the authors.\par
-  \noindent \LaTeX class and proceedings files by Giampiero Salvi\par
+  \noindent \LaTeX{} class and proceedings files by Giampiero Salvi\par
   (\url{https://github.com/giampierosalvi/LaTeXProceedings})\par
   \newpage
 }
