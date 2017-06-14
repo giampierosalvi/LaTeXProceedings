@@ -1,0 +1,1 @@
+../../confproc.cls
