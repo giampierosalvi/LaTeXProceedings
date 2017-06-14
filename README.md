@@ -28,6 +28,9 @@ Instructions:
    wish to include in the proceedings.
    The command takes three arguments: title, authors and PDF file base name of
    the article.
+   You may use the EasyChair2PaperList.py script to extract this information
+   automatically from the easychair.org List of Submission page. Read the
+   instructions inside the script for more information
 2) modify title, date and relevant information in main.tex. You might want to
    modify also the text in avsp.cls where we give copyright information.
 3) modify abstract for keynote speakers, or if you have PDF files for their
