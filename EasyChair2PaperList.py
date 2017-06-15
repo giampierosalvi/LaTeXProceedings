@@ -31,17 +31,13 @@ table = soupObj.find("table", attrs={"class":"ct_table"})
 # get headings
 headings = [th.get_text() for th in table.find("tr").find_all("th")]
 # Get indexes for relevant columns
-idxs = [headings.index("#"), headings.index("Authors"), headings.index("Title")]
+subnridx = headings.index("#")
+authorsidx = headings.index("Authors")
+titleidx = headings.index("Title")
 # get data row by row
-submissions = []
 for row in table.find_all("tr")[1:]:
     elements = [td.get_text() for td in row.find_all("td")]
-    submission={}
-    for idx in idxs:
-        submission[headings[idx]] = elements[idx]
-    submissions.append(submission)
-for submission in submissions:
-    title = submission['Title']
-    authors = submission['Authors'].replace(" and", ",")
-    fileBaseName = pdfBaseName+submission['#']
+    title = elements[titleidx]
+    authors = elements[authorsidx].replace(" and", ",")
+    fileBaseName = pdfBaseName+elements[subnridx]
     print("\includepaper{"+title+"}{"+authors+"}{"+fileBaseName+"}")
