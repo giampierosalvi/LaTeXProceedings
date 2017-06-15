@@ -38,7 +38,7 @@ Instructions:
    automatically from the http://www.easychair.org List of Submissions page. Read
    the instructions inside the script for more information
 3. modify title, date and relevant information in main.tex. You might want to
-   modify also the text in avsp.cls where we give copyright information.
+   modify also the text in `confproc.cls` where we give copyright information.
 4. modify abstract for keynote speakers, or if you have PDF files for their
    contribution, include them with the same `\includepaper` command
 5. run make (tested on Linux), this will create two PDF files, one for printing
