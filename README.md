@@ -1,6 +1,6 @@
 LaTeXProceedings
 ================
-LaTeX class files and tools used to generate proceedings for the AVSP 2011 conference from the EasyChair data
+LaTeX class files and tools used to generate proceedings for the [AVSP 2011](http://www.isca-speech.org/archive/avsp11/index.html) conference from the [EasyChair](http://www.easychair.org) data
 
 Copyright 2011-2017, Giampiero Salvi, <giampi@kth.se>
 
