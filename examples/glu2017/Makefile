@@ -7,6 +7,7 @@ TGT = glu2017
 all: ${TGT}.pdf
 
 ${TGT}.pdf: ${TGT}.tex papers.tex
+	make -C keynotes
 	pdflatex ${TGT}
 	./authorindex ${TGT}
 	pdflatex ${TGT}
