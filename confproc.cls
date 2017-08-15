@@ -106,11 +106,10 @@
   \newpage
 }
 
-\makeatletter
 %\def\trim#1{\ignorespaces#1\unskip}
 \def\addtoauthorindex#1{%
   \@for\@myauth:=#1\do{\aimention{\@myauth}}}
-\makeatother
+
 % New command to add pdf articles run like following:
 % \includepaper[offset]{title}{comma_separated_authors}{pdffile}
 \newsavebox\mybox
