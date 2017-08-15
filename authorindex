@@ -111,6 +111,8 @@ open(AUXFILE,">$tmp.aux") || die "Can't open temporary file $tmp.aux\n";
 open(BIBFILE,">$tmp.bib") || die "Can't open temporary file $tmp.bib\n";
 
 while(<>){
+    # the next avoids problems with accented letters in author names
+    s/\\IeC \{/\\IeC\{/g;
     if(/^\\citationpage\{\s*([^{ ]+)\s*\}\{(.+)\}$/){
 	$citationcount++;	# used for statistics only.
 	$workscount++ unless ($1 eq '*') or (exists $Lab2Pag{$1})
@@ -297,8 +299,8 @@ die "BibTeX error. Aborting leaving all temporary files $tmp.*\n" if $?;
 # if things went well, we can delete all these temporary files made for BibTeX.
 # The generated .bst file is kept if the user wishes so (-k option).
 
-unlink "$bst.bst" if ($bst eq $tmp && !(exists $opt{'k'}));
-unlink "$tmp.aux","$tmp.bib";
+#unlink "$bst.bst" if ($bst eq $tmp && !(exists $opt{'k'}));
+#unlink "$tmp.aux","$tmp.bib";
 
 # Decide wether pages or citation labels go to the index
 
@@ -350,7 +352,7 @@ while($author=&readtosep()){
     $plainname{$sortname}=$author;
 }
 close BIBFILE;
-unlink "$tmp.blg","$tmp.bbl";
+#unlink "$tmp.blg","$tmp.bbl";
 
 # Last not least, output the results, properly sorted if needed.
 
