@@ -100,7 +100,8 @@
   \noindent\theschool\par\vspace{5mm}
   \noindent\thehowpublished
   \vfil
-  \noindent Copyright \copyright\ 2017 by the authors.\par
+  \noindent Copyright \copyright\ 2017 for the individual papers by the papers' authors. Copying permitted for private and academic purposes. This volume is published and copyrighted by its editors.\par
+  \vspace{5mm}
   \noindent \LaTeX{} class and proceedings files by Giampiero Salvi\par
   (\url{https://github.com/giampierosalvi/LaTeXProceedings})\par
   \newpage
