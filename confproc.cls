@@ -50,13 +50,19 @@
         }
 }
 
+% code for generating toc.xml for ceur-ws.org
+\newwrite\file
+\immediate\openout\file=\jobname.ceur
+\AtEndDocument{\closeout\file}
+
+
 %
 % Header/footer layout
 %
 %\pagestyle{fancy}
 \fancypagestyle{main}{
-  \lhead[\thepage]{Grounding Language Understanding, Stockholm, Sweden, Aug 25, 2017}
-  \rhead[Grounding Language Understanding, Stockholm, Sweden, Aug 25, 2017]{\thepage}
+  \lhead[\thepage]{Grounding Language Understanding, Stockholm, Sweden, August 25, 2017}
+  \rhead[Grounding Language Understanding, Stockholm, Sweden, August 25, 2017]{\thepage}
   \lfoot{}
   \cfoot{}
 }
@@ -73,7 +79,7 @@
   \lhead{In Proceedings of the First International Workshop on Grounding Language Understanding}
   \rhead{\thepage}
   \lfoot{}
-  \cfoot{Stockholm, Sweden, Aug 25, 2017. Copyright \copyright\ 2017 by the authors.}
+  \cfoot{Stockholm, Sweden, August 25, 2017. Copyright \copyright\ 2017 by the authors.}
   \rfoot{}
   \renewcommand{\headrulewidth}{0pt}
 }
@@ -131,6 +137,8 @@
 \def\addtoauthorindex#1{%
   \@for\@myauth:=#1\do{\aimention{\@myauth}}}
 
+\newcounter{firstpage}
+\newcounter{lastpage}
 % New command to add pdf articles run like following:
 % \includepaper[offset]{title}{comma_separated_authors}{pdffile}
 \newsavebox\mybox
@@ -145,11 +153,17 @@
     %%%\ifthenelse{\numexpr\XeTeXpdfpagecount
     %%%            \XeTeXquote#1\XeTeXquote\relax > 1}{% xete
     % include first page without headers
+    \setcounter{firstpage}{\arabic{page}}
     \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{front}]{#4}%
     % include remaining pages with headers
     \includepdf[offset=#1, pages=2-,pagecommand=\thispagestyle{main}]{#4}%
+    \setcounter{lastpage}{\arabic{page}}
+    \addtocounter{lastpage}{-1}
+    \immediate\write\file{this is a \thefirstpage--\thelastpage pages file}
   }{%
+    \setcounter{firstpage}{\arabic{page}}
     \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{front}]{#4}%
+    \immediate\write\file{this is a one page file \thefirstpage--\thefirstpage}
   }
 }
 %\newcommand{\includepaper}[3]{%
