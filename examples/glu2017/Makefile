@@ -7,7 +7,7 @@ all: ${TGT}.pdf
 keynotes:
 	make -C keynotes
 
-${TGT}.pdf: ${TGT}.tex papers.tex keynotes
+${TGT}.pdf: ${TGT}.tex papers.tex confproc.cls keynotes
 	pdflatex ${TGT}
 	./authorindex ${TGT}
 	pdflatex ${TGT}
