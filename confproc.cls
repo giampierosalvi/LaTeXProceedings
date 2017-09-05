@@ -53,11 +53,31 @@
 %
 % Header/footer layout
 %
-\pagestyle{fancy}
-\lhead[\thepage]{GLU 2017, Stockholm, Sweden, Aug 25}
-\rhead[GLU 2017, Stockholm, Sweden, Aug 25]{\thepage}
-\lfoot{}
-\cfoot{}
+%\pagestyle{fancy}
+\fancypagestyle{main}{
+  \lhead[\thepage]{Grounding Language Understanding, Stockholm, Sweden, Aug 25, 2017}
+  \rhead[Grounding Language Understanding, Stockholm, Sweden, Aug 25, 2017]{\thepage}
+  \lfoot{}
+  \cfoot{}
+}
+%\fancypagestyle{front}{
+%  \lhead{}
+%  \rhead{}
+%  \lfoot{In Proceedings of the First International Workshop on Grounding Language Understanding Stockholm, Sweden, Aug 25, 2017. Copyright \copyright\ 2017 by the authors.}
+%  \cfoot{}
+%  \rfoot{\thepage}
+%  \renewcommand{\headrulewidth}{0pt}
+%  \renewcommand{\footrulewidth}{0.4pt}
+%}
+\fancypagestyle{front}{
+  \lhead{In Proceedings of the First International Workshop on Grounding Language Understanding}
+  \rhead{\thepage}
+  \lfoot{}
+  \cfoot{Stockholm, Sweden, Aug 25, 2017. Copyright \copyright\ 2017 by the authors.}
+  \rfoot{}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
 
 %
 % Included article layout (twoside offset)
@@ -125,11 +145,11 @@
     %%%\ifthenelse{\numexpr\XeTeXpdfpagecount
     %%%            \XeTeXquote#1\XeTeXquote\relax > 1}{% xete
     % include first page without headers
-    \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{plain}]{#4}%
+    \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{front}]{#4}%
     % include remaining pages with headers
-    \includepdf[offset=#1, pages=2-,pagecommand=\thispagestyle{fancy}]{#4}%
+    \includepdf[offset=#1, pages=2-,pagecommand=\thispagestyle{main}]{#4}%
   }{%
-    \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{plain}]{#4}%
+    \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{front}]{#4}%
   }
 }
 %\newcommand{\includepaper}[3]{%
