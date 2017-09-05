@@ -6,11 +6,8 @@
 # Usage:
 # 1) right click and download the html for the List of Submission page from
 #    easychair.org into (for example) ListOfSubmissions.html
-# 2) Download submissions and note the pdfBaseName (file name up to submission
-#    number), for example, if the file names are in the form
-#    papers/GLU2017_paper_10.pdf, then pdfBaseName="papers/GLU2017_paper_"
-# 3) run:
-#    python EasyChair2PaperList.py ListOfSubmissions.html pdfBaseName > papers.tex
+# 2) run:
+#    python EasyChair2CEUR-WSToc.py ListOfSubmissions.html > toc.xml
 #
 # Note: in case of multiple authors, the final " and" is substituted with a ","
 #   to comply with the LaTeXProceedings class.
@@ -21,7 +18,6 @@ import sys
 import re
 
 htmlFileName = sys.argv[1]
-pdfBaseName = sys.argv[2]
 
 with open(htmlFileName, 'r') as f:
     htmlpage=f.read()
@@ -37,11 +33,22 @@ authorsidx = headings.index("Authors")
 titleidx = headings.index("Title")
 decisionidx = headings.index("Decisions")
 # get data row by row
+print('<toc>')
+#print("    <session>")
+#print("        <title></title>")
 for row in table.find_all("tr")[1:]:
     elements = [td.get_text() for td in row.find_all("td")]
-    next if elements[decisionidx] != "ACCEPT"
-    title = elements[titleidx]
+    if elements[decisionidx] != 'ACCEPT':
+        continue
+    print('    <paper>')
+    print('        <title>'+elements[titleidx]+'</title>')
+    print('        <pages from="" to=""/>')
+    print('        <authors>')
     clearnauthors = re.sub('<[^>]*>', '', elements[authorsidx])
-    authors = re.split(' and |, ', clearnauthors)
-    fileBaseName = pdfBaseName+elements[subnridx]
-    print("\includepaper{"+title+"}{"+authors+"}{"+fileBaseName+"}")
+    for author in re.split(' and |, ', clearnauthors):
+        print('            <author>'+author+'</author>')
+    print('        </authors>')
+    print("    </paper>")
+
+#print("    </session>")
+print('</toc>')
