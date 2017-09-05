@@ -1,13 +1,13 @@
 # Copyright 2011-2017, Giampiero Salvi <giampi@kth.se>
-#TGT1 = avsp2011_proc_print
-#TGT2 = avsp2011_proc_usb
 
 TGT = glu2017
 
 all: ${TGT}.pdf
 
-${TGT}.pdf: ${TGT}.tex papers.tex
+keynotes:
 	make -C keynotes
+
+${TGT}.pdf: ${TGT}.tex papers.tex keynotes
 	pdflatex ${TGT}
 	./authorindex ${TGT}
 	pdflatex ${TGT}
