@@ -62,7 +62,8 @@
 % code for generating toc.xml for ceur-ws.org
 \newwrite\file
 \immediate\openout\file=\jobname_ceur.xml
-\AtEndDocument{\closeout\file}
+\immediate\write\file{\unexpanded{<toc>}}
+\AtEndDocument{\immediate\write\file{\unexpanded{</toc>}}\closeout\file}
 
 
 %
