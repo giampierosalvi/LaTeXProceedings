@@ -62,8 +62,8 @@
 % code for generating toc.xml for ceur-ws.org
 \newwrite\file
 \immediate\openout\file=\jobname_ceur.xml
-\immediate\write\file{\unexpanded{<toc>}}
-\AtEndDocument{\immediate\write\file{\unexpanded{</toc>}}\closeout\file}
+\immediate\write\file{<toc>}
+\AtEndDocument{\immediate\write\file{</toc>}\closeout\file}
 
 
 %
@@ -151,10 +151,10 @@
 \newenvironment{proceedingssession}[1]{%
     \refstepcounter{section}
     \addcontentsline{toc}{section}{#1}
-    \immediate\write\file{\unexpanded{<session>}}
-    \immediate\write\file{\unexpanded{<title>}#1\unexpanded{</title>}}
+    \immediate\write\file{<session>}
+    \immediate\write\file{<title>#1</title>}
   }{%
-    \immediate\write\file{\unexpanded{</session>}}%
+    \immediate\write\file{</session>}%
   }
 
 \newcounter{frompage}
@@ -185,26 +185,16 @@
     \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{front}]{#4}%
   }
   % this code outputs toc.xml to use in ceur-ws.org
-  \immediate\write\file{\unexpanded{<paper>}}
-  \immediate\write\file{\space\space\space\space\unexpanded{<title>#2</title>}}
+  \immediate\write\file{<paper>}
+  \immediate\write\file{\space\space\space\space<title>#2</title>}
   \immediate\write\file{\space\space\space\space\unexpanded{<pages from="}\thefrompage\unexpanded{" to="}\thetopage\unexpanded{"/>}}
-  \immediate\write\file{\space\space\space\space\unexpanded{<authors>}}
+  \immediate\write\file{\space\space\space\space<authors>}
   \StrSubstitute[0]{#3}{, }{,}[\@cpauthors]
   \StrSubstitute[0]{\@cpauthors}{ and }{,}[\@cpauthors]
   \@for \@cpauthor:=\@cpauthors\do{%
-    \immediate\write\file{\space\space\space\space\space\space\space\space\unexpanded{<author>}\@cpauthor\unexpanded{</author>}}
+    \immediate\write\file{\space\space\space\space\space\space\space\space<author>\expandafter\unexpanded\expandafter{\@cpauthor}</author>}
   }
-  \immediate\write\file{\space\space\space\space\unexpanded{</authors>}}
-  \immediate\write\file{\unexpanded{</paper>}}
+  \immediate\write\file{\space\space\space\space</authors>}
+  \immediate\write\file{</paper>}
 }
-%\newcommand{\includepaper}[3]{%
-%  \addcontentsline{toc}{section}{#1\\\textit{#2}}%
-%  \addtoauthorindex{#2}
-%  \includepdf[pages=-,pagecommand=\thispagestyle{fancy}]{#3}%
-%%  % include first page without headers
-%%  \includepdf[pages=1,pagecommand=\thispagestyle{plain}]{#3}
-%%  % include remaining pages with headers
-%%  \includepdf[pages=2-last,pagecommand=\thispagestyle{fancy}]{#3}%
-%}
-
 \endinput
