@@ -9,8 +9,16 @@
 %%  \address{} where the conference takes place
 %%  \editor{} Name(s) of the editors of the proceedings
 %%  \school{} School (University) hosting the conference
+%%  \includepaper[offset]{title}{comma separated authors}{pdf file}
+%%            Add a paper to the proceedings updating table of
+%%            contents and author index
+%% ADDITIONAL ENVIRONMENTS:
+%%  proceedingssession: adds a secton to the table of contents
+%%
+%% The class also outpus a \jobname_ceur.xml file that can be
+%% used for publication on the ceur-ws.org website.
 %% 
-%% Copyright 2011 Giampiero Salvi 
+%% Copyright 2011-2017 Giampiero Salvi <giampi@kth.se> 
 %% 
 %% The author is not responsible for the layout definition, but
 %% only for its implementation
@@ -32,6 +40,7 @@
 \RequirePackage[inner=2.2cm,outer=1.8cm,top=2.8cm,bottom=3.0cm]{geometry}
 \RequirePackage{pdfpages}
 \RequirePackage{authorindex}
+\RequirePackage{xstring} % used to output xml file for ceur-ws.org
 
 \newcommand{\address}[1]{\gdef\theaddress{#1}}
 \newcommand{\editor}[1]{\gdef\theeditor{#1}}
@@ -52,7 +61,7 @@
 
 % code for generating toc.xml for ceur-ws.org
 \newwrite\file
-\immediate\openout\file=\jobname.ceur
+\immediate\openout\file=\jobname_ceur.xml
 \AtEndDocument{\closeout\file}
 
 
@@ -137,8 +146,18 @@
 \def\addtoauthorindex#1{%
   \@for\@myauth:=#1\do{\aimention{\@myauth}}}
 
-\newcounter{firstpage}
-\newcounter{lastpage}
+% adds a section to the table of contents and to the xml file for ceur-ws.org
+\newenvironment{proceedingssession}[1]{%
+    \refstepcounter{section}
+    \addcontentsline{toc}{section}{#1}
+    \immediate\write\file{\unexpanded{<session>}}
+    \immediate\write\file{\unexpanded{<title>}#1\unexpanded{</title>}}
+  }{%
+    \immediate\write\file{\unexpanded{</session>}}%
+  }
+
+\newcounter{frompage}
+\newcounter{topage}
 % New command to add pdf articles run like following:
 % \includepaper[offset]{title}{comma_separated_authors}{pdffile}
 \newsavebox\mybox
@@ -153,18 +172,29 @@
     %%%\ifthenelse{\numexpr\XeTeXpdfpagecount
     %%%            \XeTeXquote#1\XeTeXquote\relax > 1}{% xete
     % include first page without headers
-    \setcounter{firstpage}{\arabic{page}}
+    \setcounter{frompage}{\arabic{page}}
     \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{front}]{#4}%
     % include remaining pages with headers
     \includepdf[offset=#1, pages=2-,pagecommand=\thispagestyle{main}]{#4}%
-    \setcounter{lastpage}{\arabic{page}}
-    \addtocounter{lastpage}{-1}
-    \immediate\write\file{this is a \thefirstpage--\thelastpage pages file}
+    \setcounter{topage}{\arabic{page}}
+    \addtocounter{topage}{-1}
   }{%
-    \setcounter{firstpage}{\arabic{page}}
+    \setcounter{frompage}{\arabic{page}}
+    \setcounter{topage}{\arabic{page}}
     \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{front}]{#4}%
-    \immediate\write\file{this is a one page file \thefirstpage--\thefirstpage}
   }
+  % this code outputs toc.xml to use in ceur-ws.org
+  \immediate\write\file{\unexpanded{<paper>}}
+  \immediate\write\file{\space\space\space\space\unexpanded{<title>#2</title>}}
+  \immediate\write\file{\space\space\space\space\unexpanded{<pages from="}\thefrompage\unexpanded{" to="}\thetopage\unexpanded{"/>}}
+  \immediate\write\file{\space\space\space\space\unexpanded{<authors>}}
+  \StrSubstitute[0]{#3}{, }{,}[\@cpauthors]
+  \StrSubstitute[0]{\@cpauthors}{ and }{,}[\@cpauthors]
+  \@for \@cpauthor:=\@cpauthors\do{%
+    \immediate\write\file{\space\space\space\space\space\space\space\space\unexpanded{<author>}\@cpauthor\unexpanded{</author>}}
+  }
+  \immediate\write\file{\space\space\space\space\unexpanded{</authors>}}
+  \immediate\write\file{\unexpanded{</paper>}}
 }
 %\newcommand{\includepaper}[3]{%
 %  \addcontentsline{toc}{section}{#1\\\textit{#2}}%
