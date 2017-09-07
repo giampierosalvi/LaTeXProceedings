@@ -45,6 +45,7 @@
 \newcommand{\address}[1]{\gdef\theaddress{#1}}
 \newcommand{\editor}[1]{\gdef\theeditor{#1}}
 \newcommand{\school}[1]{\gdef\theschool{#1}}
+\newcommand{\publishedby}[1]{\gdef\thepublishedby{#1}}
 \newcommand{\isbn}[1]{\gdef\theisbn{#1}}
 \newcommand{\issn}[1]{\gdef\theissn{#1}}
 \newcommand{\howpublished}[1]{\gdef\thehowpublished{#1}}
@@ -133,7 +134,7 @@
   \noindent ISBN: \theisbn\par
   \noindent ISSN: \theissn\par\vspace{5mm}
   \noindent Published by\par
-  \noindent\theschool\par\vspace{5mm}
+  \noindent\thepublishedby\par\vspace{5mm}
   \noindent\thehowpublished
   \vfil
   \noindent Copyright \copyright\ 2017 for the individual papers by the papers' authors. Copying permitted for private and academic purposes. This volume is published and copyrighted by its editors.\par
