@@ -131,7 +131,7 @@
   \noindent\theeditor\par
   \noindent\theschool\par\vspace{5mm}
   \noindent Proceedings of the \conftype{} on \@title\par\vspace{5mm}
-  \noindent ISBN: \theisbn\par
+  \ifx\theisbn\undefined\else\noindent ISBN: \theisbn\par\fi
   \noindent ISSN: \theissn\par\vspace{5mm}
   \noindent Published by\par
   \noindent\thepublishedby\par\vspace{5mm}
