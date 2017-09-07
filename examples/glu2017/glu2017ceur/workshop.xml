@@ -1,0 +1,78 @@
+<!--
+    This is a sample workshop.xml file that shows the possible constructs.
+    
+    Part of ceur-make (https://github.com/ceurws/ceur-make/)
+    
+    Note:
+    * Some steps require further manual work.
+    * There are still a lot of hard-coded assumptions in this implementation.
+    
+    © Christoph Lange and contributors 2012–2015
+    
+    Licensed under GPLv3 or any later version
+-->
+<workshop>
+    <title>
+        <!-- ID used to name some of the generated files.  The year, defined in <date> below, will usually be appended to this. -->
+        <id>glu</id>
+        <!-- acronym of the event (CEURVOLACRONYM) -->
+        <acronym>GLU</acronym>
+        <!-- long name of the event (CEURVOLTITLE) -->
+        <volume>Grounding Language Understanding 2017</volume>
+        <!-- full title of the proceedings volume (CEURFULLTILE) --> 
+        <full>First International Workshop on Grounding Language Understanding</full>
+    </title>
+
+    <!-- CEUR-WS.org proceedings volume number (CEURVOLNR)
+
+         Take care: You usually don't know this number in advance, at least not in the case that there are multiple submissions to CEUR-WS.org on the same day.  We recommend that you ask in advance for a volume number, as explained in the “Procedure PUT” section of http://ceur-ws.org/HOWTOSUBMIT.html.
+         -->
+    <number>XXX</number>
+
+    <!-- homepage of the event -->
+    <homepage>http://www.speech.kth.se/glu2017/</homepage>
+
+    <!-- main language of the proceedings (CEURLANG; ISO 639-2/T language code, e.g. eng, deu, fra, spa, rus, ita, por, ..., or look up at https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes -->
+    <language>eng</language>
+    
+    <!-- location and date of the event (CEURLOCTIME).  Note: if you create a BibTeX database to make it easier for others to cite your papers, this information will also be included.  If a LaTeX document author uses  BibLaTeX (http://ctan.org/pkg/biblatex), this information will be used. -->
+
+    <!-- location; please also look it up on the English Wikipedia (http://en.wikipedia.org) and copy that URL into href="..." -->
+    <location href="http://en.wikipedia.org/wiki/Bremen">Stockholm, Sweden</location>
+    <!-- date of a one-day event in YYYY-MM-DD format -->
+    <date>2017-08-25</date>
+    <!-- alternatively: date of a multi-day event -->
+    <!-- <date> -->
+    <!--     <from>2013-06-18</from> -->
+    <!--     <to>2013-06-20</to> -->
+    <!-- </date> -->
+    <!-- year in which the final papers of the proceedings were produced (CEURPUBYEAR); uncomment and edit if different from the year in <date> -->
+    <!--
+    <pubyear>2014</pubyear>
+    -->
+
+    <!-- conference this workshop is co-located with (CEURCOLOCATED);
+         remove the whole <conference>...</conference> element if the workshop is standalone -->
+    <conference>
+        <acronym>Interspeech 2017</acronym>
+        <full>Interspeech</full>
+        <homepage>http://www.interspeech2017.org</homepage>
+    </conference>
+
+    <!-- editors of the proceedings volume (usually at the same time the chairs of the workshop; CEURVOLEDITOR) -->
+    <editors>
+        <!-- please sort alphabetically; the XSLT does not yet do this automatically -->
+        <editor submitting="true">
+            <homepage>http://www.kth.se/profile/giampi/</homepage>
+            <name>Giampiero Salvi</name>
+            <affiliation>KTH Royal Institute of Technology</affiliation>
+            <country>Sweden</country>
+        </editor>
+        <editor>
+            <homepage>http://tcts.fpms.ac.be/~dupont/</homepage>
+            <name>Stéphane Dupont</name>
+            <affiliation>Université de Mons</affiliation>
+            <country>Belgium</country>
+        </editor>
+    </editors>
+</workshop>

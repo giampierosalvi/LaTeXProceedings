@@ -1,0 +1,184 @@
+@comment{It is strongly recommended to use BibLaTeX for these entries}
+
+@inproceedings{Legenstein:GLU2017,
+title = {Binding through assemblies in the human brain: Recent data and models},
+author = {Robert Legenstein},
+pages = {1--1},
+url = {http://ceur-ws.org/Vol-XXX/#paper-01},
+crossref = {GLU2017},
+}
+
+@inproceedings{Pastra:GLU2017,
+title = {Recursion all the way: in Language, Action and Semantic Association},
+author = {Katerina Pastra},
+pages = {3--3},
+url = {http://ceur-ws.org/Vol-XXX/#paper-02},
+crossref = {GLU2017},
+}
+
+@inproceedings{Dupoux:GLU2017,
+title = {Towards Autonomous Language Learning},
+author = {Emmanuel Dupoux},
+pages = {5--5},
+url = {http://ceur-ws.org/Vol-XXX/#paper-03},
+crossref = {GLU2017},
+}
+
+@inproceedings{AntunesEtAl:GLU2017,
+title = {Communication with Speech and Gestures: Applications of Recurrent Neural Networks to Robot Language Learning},
+author = {Alexandre Antunes and Gabriella Pizzuto and Angelo Cangelosi},
+pages = {7--10},
+url = {http://ceur-ws.org/Vol-XXX/#paper-04},
+crossref = {GLU2017},
+}
+
+@inproceedings{KumarEtAl:GLU2017,
+title = {Towards a Knowledge Graph based Speech Interface},
+author = {Ashwini Jaya Kumar and Sören Auer and Christoph Schmidt and Joachim Köhler},
+pages = {11--15},
+url = {http://ceur-ws.org/Vol-XXX/#paper-05},
+crossref = {GLU2017},
+}
+
+@inproceedings{AntanasEtAl:GLU2017,
+title = {Relational Symbol Grounding through Affordance Learning: An Overview of the ReGround Project},
+author = {Laura Antanas and Jesse Davis and Luc De Raedt and Amy Loutfi and Andreas Persson and Alessandro Saffiotti and Deniz Yuret and Ozan Arkan Can and Emre Unal and Pedro Zuidberg Dos Martires},
+pages = {17--21},
+url = {http://ceur-ws.org/Vol-XXX/#paper-06},
+crossref = {GLU2017},
+}
+
+@inproceedings{Abu-ZhayaEtAl:GLU2017,
+title = {Building a multimodal lexicon: Lessons from infants' learning of body part words},
+author = {Rana Abu-Zhaya and Amanda Seidl and Ruth Tincoff and Alejandrina Cristia},
+pages = {23--26},
+url = {http://ceur-ws.org/Vol-XXX/#paper-07},
+crossref = {GLU2017},
+}
+
+@inproceedings{DhakaSalvi:GLU2017,
+title = {Sparse Autoencoder Based Semi-Supervised Learning for Phone Classification with Limited Annotations},
+author = {Akash Kumar Dhaka and Giampiero Salvi},
+pages = {27--31},
+url = {http://ceur-ws.org/Vol-XXX/#paper-08},
+crossref = {GLU2017},
+}
+
+@inproceedings{MyrmanSalvi:GLU2017,
+title = {Partitioning of Posteriorgrams using Siamese Models for Unsupervised Acoustic Modelling},
+author = {Arvid Fahlström Myrman and Giampiero Salvi},
+pages = {33--37},
+url = {http://ceur-ws.org/Vol-XXX/#paper-09},
+crossref = {GLU2017},
+}
+
+@inproceedings{IjuinEtAl:GLU2017,
+title = {Comparison of Effect of Speaker's Eye Gaze on Selection of Next Speaker between Native- and Second-Language Conversations},
+author = {Koki Ijuin and Takato Yamashita and Tsuneo Kato and Seiichi Yamamoto},
+pages = {39--43},
+url = {http://ceur-ws.org/Vol-XXX/#paper-10},
+crossref = {GLU2017},
+}
+
+@inproceedings{Räsänen:GLU2017,
+title = {Language is Not About Language: Towards Formalizing the Role of Extra-Linguistic Factors in Human and Machine Language Acquisition and Communication},
+author = {Okko Räsänen},
+pages = {45--49},
+url = {http://ceur-ws.org/Vol-XXX/#paper-11},
+crossref = {GLU2017},
+}
+
+@inproceedings{HavardEtAl:GLU2017,
+title = {SPEECH-COCO: 600k Visually Grounded Spoken Captions Aligned to MSCOCO Data Set},
+author = {William Havard and Laurent Besacier and Olivier Rosec},
+pages = {51--55},
+url = {http://ceur-ws.org/Vol-XXX/#paper-12},
+crossref = {GLU2017},
+}
+
+@inproceedings{StefanovEtAl:GLU2017,
+title = {Vision-based Active Speaker Detection in Multiparty Interaction},
+author = {Kalin Stefanov and Jonas Beskow and Giampiero Salvi},
+pages = {57--61},
+url = {http://ceur-ws.org/Vol-XXX/#paper-13},
+crossref = {GLU2017},
+}
+
+@inproceedings{Silber-VarodEtAl:GLU2017,
+title = {Automatic Speaker\OT1\textquoteright s Role Classification With a Bottom-up Acoustic Feature Selection},
+author = {Vered Silber-Varod and Anat Lerner and Oliver Jokisch},
+pages = {63--67},
+url = {http://ceur-ws.org/Vol-XXX/#paper-14},
+crossref = {GLU2017},
+}
+
+@inproceedings{DrexlerGlass:GLU2017,
+title = {Analysis of Audio-Visual Features for Unsupervised Speech Recognition},
+author = {Jennifer Drexler and James Glass},
+pages = {69--73},
+url = {http://ceur-ws.org/Vol-XXX/#paper-15},
+crossref = {GLU2017},
+}
+
+@inproceedings{DelbrouckEtAl:GLU2017,
+title = {Visually Grounded Word Embeddings and Richer Visual Features for Improving Multimodal Neural Machine Translation},
+author = {Jean-Benoit Delbrouck and Stéphane Dupont and Omar Seddati},
+pages = {75--80},
+url = {http://ceur-ws.org/Vol-XXX/#paper-16},
+crossref = {GLU2017},
+}
+
+@inproceedings{BrodeurEtAl:GLU2017,
+title = {Proposal of a Generative Model of Event-based Representations for Grounded Language Understanding},
+author = {Simon Brodeur and Luca Celotti and Jean Rouat},
+pages = {81--85},
+url = {http://ceur-ws.org/Vol-XXX/#paper-17},
+crossref = {GLU2017},
+}
+
+@inproceedings{AzagraEtAl:GLU2017,
+title = {Finding Regions of Interest from Multimodal Human-Robot Interactions},
+author = {Pablo Azagra and Javier Civera and Ana C. Murillo},
+pages = {87--91},
+url = {http://ceur-ws.org/Vol-XXX/#paper-18},
+crossref = {GLU2017},
+}
+
+@inproceedings{ShoreSkantze:GLU2017,
+title = {Enhancing reference resolution in dialogue using participant feedback},
+author = {Todd Shore and Gabriel Skantze},
+pages = {93--97},
+url = {http://ceur-ws.org/Vol-XXX/#paper-19},
+crossref = {GLU2017},
+}
+
+@inproceedings{SaponaroEtAl:GLU2017,
+title = {Interactive Robot Learning of Gestures, Language and Affordances},
+author = {Giovanni Saponaro and Lorenzo Jamone and Alexandre Bernardino and Giampiero Salvi},
+pages = {99--103},
+url = {http://ceur-ws.org/Vol-XXX/#paper-20},
+crossref = {GLU2017},
+}
+
+@inproceedings{HoughEtAl:GLU2017,
+title = {Grounding Imperatives to Actions is Not Enough: A Challenge for Grounded NLU for Robots from Human-Human data},
+author = {Julian Hough and Sina Zarriess and David Schlangen},
+pages = {105--108},
+url = {http://ceur-ws.org/Vol-XXX/#paper-21},
+crossref = {GLU2017},
+}
+
+@proceedings{GLU2017,
+booktitle = {First International Workshop on Grounding Language Understanding (GLU)},
+title = {Proceedings of the First International Workshop on Grounding Language Understanding (GLU)},
+year = 2017,
+editor = {Giampiero Salvi and Stéphane Dupont},
+number = XXX,
+series = {CEUR Workshop Proceedings},
+address = {Aachen},
+issn = {1613-0073},
+url = {http://ceur-ws.org/Vol-XXX/},
+venue = {Stockholm, Sweden},
+eventdate = {2017-08-25},
+}
+

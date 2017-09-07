@@ -59,7 +59,7 @@
         }
 }
 
-% code for generating toc.xml for ceur-ws.org
+% code for generating xml file for ceur-ws.org
 \newwrite\file
 \immediate\openout\file=\jobname_ceur.xml
 \immediate\write\file{<toc>}
@@ -184,16 +184,21 @@
     \setcounter{topage}{\arabic{page}}
     \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{front}]{#4}%
   }
-  % this code outputs toc.xml to use in ceur-ws.org
+  % this code outputs xml file to use in ceur-ws.org
   \immediate\write\file{<paper>}
   \immediate\write\file{\space\space\space\space<title>#2</title>}
   \immediate\write\file{\space\space\space\space\unexpanded{<pages from="}\thefrompage\unexpanded{" to="}\thetopage\unexpanded{"/>}}
   \immediate\write\file{\space\space\space\space<authors>}
-  \StrSubstitute[0]{#3}{, }{,}[\@cpauthors]
-  \StrSubstitute[0]{\@cpauthors}{ and }{,}[\@cpauthors]
-  \@for \@cpauthor:=\@cpauthors\do{%
-    \immediate\write\file{\space\space\space\space\space\space\space\space<author>\expandafter\unexpanded\expandafter{\@cpauthor}</author>}
+  \def\listofauthors{#3}
+  \begingroup
+  \expandarg
+  \StrSubstitute[0]{\listofauthors}{, }{,}[\listofauthors]
+  \StrSubstitute[0]{\listofauthors}{ and }{,}[\listofauthors]
+  %\restoreexpandmode
+  \@for\@cpauthor:=\listofauthors\do{%
+    \immediate\write\file{\space\space\space\space\space\space\space\space<author>\detokenize\expandafter{\@cpauthor}</author>}
   }
+  \endgroup
   \immediate\write\file{\space\space\space\space</authors>}
   \immediate\write\file{</paper>}
 }
