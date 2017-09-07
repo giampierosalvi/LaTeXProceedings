@@ -187,7 +187,7 @@
   }
   % this code outputs xml file to use in ceur-ws.org
   \immediate\write\file{<paper>}
-  \immediate\write\file{\space\space\space\space<title>#2</title>}
+  \immediate\write\file{\space\space\space\space<title>\unexpanded{#2}</title>}
   \immediate\write\file{\space\space\space\space\unexpanded{<pages from="}\thefrompage\unexpanded{" to="}\thetopage\unexpanded{"/>}}
   \immediate\write\file{\space\space\space\space<authors>}
   \def\listofauthors{#3}
