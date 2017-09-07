@@ -59,7 +59,7 @@
         }
 }
 
-% code for generating toc.xml for ceur-ws.org
+% code for generating xml file for ceur-ws.org
 \newwrite\file
 \immediate\openout\file=\jobname_ceur.xml
 \immediate\write\file{<toc>}
@@ -184,7 +184,7 @@
     \setcounter{topage}{\arabic{page}}
     \includepdf[offset=#1, pages=1,pagecommand=\thispagestyle{front}]{#4}%
   }
-  % this code outputs toc.xml to use in ceur-ws.org
+  % this code outputs xml file to use in ceur-ws.org
   \immediate\write\file{<paper>}
   \immediate\write\file{\space\space\space\space<title>#2</title>}
   \immediate\write\file{\space\space\space\space\unexpanded{<pages from="}\thefrompage\unexpanded{" to="}\thetopage\unexpanded{"/>}}
