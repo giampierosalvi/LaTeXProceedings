@@ -23,24 +23,25 @@ pdfProceedings = PdfFileReader(open(pdfFileName, "rb"))
 
 with open(xmlFileName, 'r') as f:
     xmlpage=f.read()
-
-output = PdfFileWriter()
-for pageid in range(preamblepages):
-    output.addPage(pdfProceedings.getPage(pageid))
-outputFileName = os.path.join(destDir, "GLU2017_frontmatter.pdf")
-with open(outputFileName, "wb") as outputStream:
-     output.write(outputStream)
-
 soupObj = BeautifulSoup(xmlpage, "lxml")
+
+def writePageRange(reader, pageRange, outputFileName):
+    output = PdfFileWriter()
+    for pageid in pageRange:
+        output.addPage(reader.getPage(pageid))
+    with open(outputFileName, "wb") as outputStream:
+        output.write(outputStream)
+
+writePageRange(pdfProceedings, range(preamblepages), os.path.join(destDir, "GLU2017_frontmatter.pdf"))
+
 paperid = 1
 for paper in soupObj.toc.findAll("paper"):
     frompage = int(paper.pages["from"])+preamblepages-1
     topage = int(paper.pages["to"])+preamblepages-1
-    output = PdfFileWriter()
-    for pageid in range(frompage,topage+1):
-        output.addPage(pdfProceedings.getPage(pageid))
     outputFileName = os.path.join(destDir, "GLU2017_paper-{:02d}.pdf".format(paperid))
-    with open(outputFileName, "wb") as outputStream:
-        output.write(outputStream)
+    writePageRange(pdfProceedings, range(frompage,topage+1), outputFileName)
     paperid=paperid+1
 
+# write author index
+pageid = pdfProceedings.getNumPages()-1
+writePageRange(pdfProceedings, range(pageid, pageid+1), os.path.join(destDir, "GLU2017_authorindex.pdf"))
