@@ -1,0 +1,9 @@
+series = GLU
+title = GLU 2017 International Workshop on Grounding Language Understanding
+location = Stockholm, Sweden
+startDate = 25/8/2017
+endDate = 25/8/2017
+URL = http://www.speech.kth.se/glu2017/
+chair = Giampiero Salvi and Stéphane Dupont
+intro = intro.pdf
+ISBN = 978-91-639-4916-6
