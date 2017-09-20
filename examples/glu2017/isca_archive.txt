@@ -1,0 +1,2 @@
+# this is run to generate papers.txt and sessions.txt. The latter is later modified to have the keynotes first
+python tools/isca_archive.py papers.tex isca_archive/papers.txt isca_archive/sessions.txt
