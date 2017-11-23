@@ -1,0 +1,22 @@
+id|authors|title
+GLU2017_keynote_01|Robert Legenstein|Binding through assemblies in the human brain: Recent data and models
+GLU2017_keynote_02|Katerina Pastra|Recursion all the way: in Language, Action and Semantic Association
+GLU2017_keynote_03|Emmanuel Dupoux|Towards Autonomous Language Learning
+GLU2017_paper_1|Alexandre Antunes, Gabriella Pizzuto and Angelo Cangelosi|Communication with Speech and Gestures: Applications of Recurrent Neural Networks to Robot Language Learning
+GLU2017_paper_2|Ashwini Jaya Kumar, Sören Auer, Christoph Schmidt, Joachim Köhler|Towards a Knowledge Graph based Speech Interface
+GLU2017_paper_3|Laura Antanas, Jesse Davis, Luc {De Raedt}, Amy Loutfi, Andreas Persson, Alessandro Saffiotti, Deniz Yuret, Ozan Arkan Can, Emre Unal, Pedro {Zuidberg Dos Martires}|Relational Symbol Grounding through Affordance Learning: An Overview of the ReGround Project
+GLU2017_paper_4|Rana Abu-Zhaya, Amanda Seidl, Ruth Tincoff and Alejandrina Cristia|Building a Multimodal Lexicon: Lessons from Infants' Learning of Body Part Words
+GLU2017_paper_5|Akash {Kumar Dhaka}, Giampiero Salvi|Sparse Autoencoder Based Semi-Supervised Learning for Phone Classification with Limited Annotations
+GLU2017_paper_6|Arvid {Fahlström Myrman}, Giampiero Salvi|Partitioning of Posteriorgrams Using Siamese Models for Unsupervised Acoustic Modelling
+GLU2017_paper_7|Koki Ijuin, Takato Yamashita, Tsuneo Kato, Seiichi Yamamoto|Comparison of Effect of Speaker's Eye Gaze on Selection of Next Speaker between Native- and Second-Language Conversations
+GLU2017_paper_9|Okko Räsänen|Language is Not About Language: Towards Formalizing the Role of Extra-Linguistic Factors in Human and Machine Language Acquisition and Communication
+GLU2017_paper_10|William Havard, Laurent Besacier, Olivier Rosec|SPEECH-COCO: 600k Visually Grounded Spoken Captions Aligned to MSCOCO Data Set
+GLU2017_paper_11|Kalin Stefanov, Jonas Beskow, Giampiero Salvi|Vision-based Active Speaker Detection in Multiparty Interaction
+GLU2017_paper_13|Vered Silber-Varod, Anat Lerner, Oliver Jokisch|Automatic Speaker's Role Classification With a Bottom-up Acoustic Feature Selection
+GLU2017_paper_14|Jennifer Drexler, James Glass|Analysis of Audio-Visual Features for Unsupervised Speech Recognition
+GLU2017_paper_15|Jean-Benoit Delbrouck, Stéphane Dupont, Omar Seddati|Visually Grounded Word Embeddings and Richer Visual Features for Improving Multimodal Neural Machine Translation
+GLU2017_paper_16|Simon Brodeur, Luca Celotti, Jean Rouat|Proposal of a Generative Model of Event-based Representations for Grounded Language Understanding
+GLU2017_paper_17|Pablo Azagra, Javier Civera, Ana C. Murillo|Finding Regions of Interest from Multimodal Human-Robot Interactions
+GLU2017_paper_18|Todd Shore, Gabriel Skantze|Enhancing Reference Resolution in Dialogue Using Participant Feedback
+GLU2017_paper_20|Giovanni Saponaro, Lorenzo Jamone, Alexandre Bernardino, Giampiero Salvi|Interactive Robot Learning of Gestures, Language and Affordances
+GLU2017_paper_21|Julian Hough, Sina Zarriess, David Schlangen|Grounding Imperatives to Actions is Not Enough: A Challenge for Grounded NLU for Robots from Human-Human data
